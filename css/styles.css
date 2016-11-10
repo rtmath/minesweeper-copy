@@ -30,11 +30,11 @@ body {
 }
 
 .instructions, .leaderboard {
-  margin-top:10%;
+  margin-top:3%;
   background-color: rgba(2,2,2, 0.8);
   border-radius: 20px;
   color: white;
-  height:650px;
+  height:550px;
   font-family: monospace;
 }
 
@@ -45,11 +45,12 @@ body {
 }
 
 .gameScreen {
-  margin-top: 10%;
+  margin-top: 3%;
   background-color: rgba(0,0,0, 0.6);
   border-style: double;
   border-color: black;
   border-radius: 2%;
+  min-height: 90vh;
   size: contain;
   min-width: 1000px;
   font-family: '8BITWONDERNominal';
@@ -78,12 +79,13 @@ body {
   height: 200px;
   width: 500px;
   border-radius:5%;
+  margin-bottom: 2%;
 }
 
-#min_height {
+/*#min_height {
   height: 350px;
   min-height: 350px;
-}
+}*/
 
 #width_min {
   min-width: 1500px;
@@ -91,7 +93,7 @@ body {
 
 .grid {
   width: 100%;
-  margin-bottom:100px;
+  margin-bottom: 5%;
   background-color: black;
 }
 
@@ -171,7 +173,7 @@ input {
 }
 
 .easyBG {
-  height: cover;
+  height: 100%;
   width: 100%;
   background-image: url(../img/easyBG.png);
   background-size: cover;

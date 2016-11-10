@@ -339,33 +339,32 @@ Board.prototype.changeColor = function() {
 }
 
 function fallingBanana() {
-    var $bananas = $(),
-        createBananas = function () {
-            var qt = 30;
-            for (var i = 0; i < qt; ++i) {
-                var $banana = $('<img class="bananas"  style="transform: rotate(360deg); transform-origin: bottom left;" src="img/banana1.png">');
-                $banana.css({
-                    'left': (Math.random() * $('body').width()) + 'px',
-                    'top': (- Math.random() * $('body').height()) + 'px'
-                });
-                $bananas = $bananas.add($banana);
-            }
-            $('#bananaZone').prepend($bananas);
-        },
-
-        runBananaStorm = function() {
-            $bananas.each(function() {
-                var singleAnimation = function($nanner) {
-                    $nanner.animate({
-                        top: "1000px",
-                        opacity : "0",
-                    }, Math.random()*-2500 + 5000)
-                };
-                singleAnimation($(this));
-            });
-    };
-    createBananas();
-    runBananaStorm();
+  var $bananas = $(),
+  createBananas = function () {
+      var qt = 30;
+      for (var i = 0; i < qt; ++i) {
+          var $banana = $('<img class="bananas"  style="transform: rotate(360deg); transform-origin: bottom left;" src="img/banana1.png">');
+          $banana.css({
+              'left': (Math.random() * $('body').width()) + 'px',
+              'top': (- Math.random() * $('body').height()) + 'px'
+          });
+          $bananas = $bananas.add($banana);
+      }
+      $('#bananaZone').prepend($bananas);
+  },
+  runBananaStorm = function() {
+      $bananas.each(function() {
+          var singleAnimation = function($nanner) {
+              $nanner.animate({
+                  top: "1000px",
+                  opacity : "0",
+              }, Math.random()*-2500 + 5000)
+          };
+          singleAnimation($(this));
+      });
+  };
+  createBananas();
+  runBananaStorm();
 }
 
 var gameBoard = new Board();
@@ -408,6 +407,8 @@ $(function() {
   $(function() {
     $("#playAgain").click(function() {
       $(".gameOver").hide();
+      $(".counters").hide();
+      $(".grid").hide();
       $(".gameSetup").show();
     })
   })
@@ -415,8 +416,9 @@ $(function() {
     $(".counters").show();
     $("#bananaZone").empty();
     event.preventDefault();
-
-    $(".grid").removeClass("easyBorder mediumBorder hardBorder");
+    $(".gameSetup").hide();
+    $(".grid").show();
+    // $(".grid").removeClass("easyBorder mediumBorder hardBorder");
     // $(".timer").show();
 
     if (scoreboard.difficulty === 0.1) {
