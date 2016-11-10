@@ -11,7 +11,7 @@ _Allow the user to play a Donkey Kong themed version of Minesweeper._
 
 _As long as the user does not refresh the page, the site will keep track of high scores for each difficulty setting.  Right-click on a square to reveal it, left-click to place a flag._
 
-_[Link to site.](http://levibibo.github.io/minesweeper)_
+_[Link to site.](https://rtmath.github.io/minesweeper-copy/)_
 
 ## Specifications
 
